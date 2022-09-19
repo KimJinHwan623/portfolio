@@ -8,8 +8,138 @@ a { outline:0; text-decoration:none; color:#555; }
 img { border:0;}
 body { width:100%; min-width:1400px; height:23000px; font-family:Orbitron; font-size:12px; letter-spacing:2px;} 
 
+
+
 /*배경 이미지*/
-.bg { position:fixed; width:100%; height:100%; top:0px; left:0px;  background:url(../img/bg.jpg) no-repeat center top; background-size:cover;}
+.bg { position:fixed; width:10%; height:10%; top:0px; left:0px;  background:url(../img/bg.gif) no-repeat center top; background-size:cover;}
+
+/* 지도 용산 */
+
+.yong-san_map
+{
+      width: 100%;
+      height: 100%;
+      padding: 150px;
+      margin: 0;
+  }
+
+  #contact_map {
+      width: 800px;
+      height: 500px;
+  }
+
+  #contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border:0;
+  }
+
+  /* 지도 코엑스 */
+
+.coex_map
+{
+      width: 100%;
+      height: 100%;
+      padding: 150px;
+      margin: 0;
+  }
+
+  #contact_map {
+      width: 800px;
+      height: 500px;
+  }
+
+  #contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border:0;
+  }
+
+    /* 지도 코엑스 */
+
+.nowon_map
+{
+      width: 100%;
+      height: 100%;
+      padding: 150px;
+      margin: 0;
+  }
+
+  #contact_map {
+      width: 800px;
+      height: 500px;
+  }
+
+  #contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border:0;
+  }
+
+      /* 지도 수원 */
+
+.suwon_map
+{
+      width: 100%;
+      height: 100%;
+      padding: 150px;
+      margin: 0;
+  }
+
+  #contact_map {
+      width: 800px;
+      height: 500px;
+  }
+
+  #contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border:0;
+  }
+
+  /* 소개 글*/
+
+
+.title{
+    font-family:Orbitron;
+    font-size: 50px;
+    font-weight: bold;
+    width:100%; padding: 25px; z-index:2;
+    text-align: center;
+    color: rgb(187, 184, 33);
+
+}
+
+.title1.splitting .char {
+    top:150px;
+    animation: bounceInDown 1s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title2.splitting .char {
+    top:155px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title3.splitting .char {
+    top:160px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title4.splitting .char {
+    top:165px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title5.splitting .char {
+    top:170px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
 
 /*로고*/
 h1 { position:fixed; top:40px; left:70px; z-index:2;}
@@ -17,9 +147,25 @@ h1 img { width:130px; }
 
 /*주 메뉴*/
 .gnb { position:fixed; top:50px; right:25px; z-index:2;}
-.gnb li { float:left; margin-left:50px;}
+.gnb li { float:left; margin-left:50px; list-style: none;   line-height: 34px;}
 .gnb li a { font-size:30px; font-weight:bold; color:rgb(255, 255, 255); transform:scale(1); opacity:0.5; transition:all 0.5s;}
-.gnb li a:hover { transform:scale(1.5); opacity:1;}
+.gnb li a:hover { transform:scale(1.5); opacity:1;}  
+
+.gnb a {
+  display: block; /* 범위 확장 */
+  text-decoration: none;
+  color: #616161;
+  text-align: center;
+  }
+
+  .snd_menu { background: #efefef; }
+  .trd_menu { background: #ddd; }
+  .sub_menu { display: none; } /* 서브메뉴들 숨김 */
+  
+  .selec { background: #c45; color: #efefef; }
+
+
+
 
 /*sns 모음*/
 .sns { position:fixed; top:20px; right:50px; z-index:2; }

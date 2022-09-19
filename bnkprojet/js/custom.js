@@ -1,4 +1,14 @@
 ﻿$(document).ready(function(){
+
+
+    // 메뉴 슬라이드
+	$(".gnb > li > a").click(function(){
+		$(this).next($(".snd_menu")).slideToggle("fast");
+	  })
+	  $(".snd_menu > li > a").click(function(e){
+		e.stopPropagation();
+		$(this).next($(".trd_menu")).slideToggle("fast");
+	  })
 	
 	//페이지 로딩 시 제일 상단으로 스크롤 이동
 	$("body,html").stop().animate({"scrollTop":0},1500,"swing");	
