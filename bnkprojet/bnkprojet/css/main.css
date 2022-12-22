@@ -1,0 +1,219 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+/*  처음화면 CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { width:100%; min-width:1400px; height:23000px; font-family:Orbitron; font-size:12px; letter-spacing:2px;} 
+
+
+
+/*배경 이미지*/
+.bg { position:fixed; width:100%; height:100%; top:0px; left:0px;  background:url(../img/bg.gif) no-repeat center top; background-size:cover;}
+
+/* 지도 용산 */
+.yong-san-earth_map { position:fixed; width:100%; height:100%; top:0px; left:0px;  background:url(../img/yong-san.gif) no-repeat center top; background-size:cover;}
+
+.yong-san_map
+{
+    position: absolute;
+   
+    padding: 150px;
+    margin: 0;
+
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+
+    }
+
+    @keyframes move {
+        /* keyframe */
+        from {
+          left: 10000;
+        }
+        /* keyframe */
+        to {
+          left: 1px;
+        }
+      }
+
+ 
+  /* 지도 코엑스 */
+  .coex-earth_map { position:fixed; width:100%; height:100%; top:-10px; left:-10px;  background:url(../img/coex.gif) no-repeat center top; background-size:cover;}
+
+.coex_map
+{
+    position: absolute;
+   
+    padding: 150px;
+    margin: 0;
+
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+
+    }
+
+    @keyframes move {
+        /* keyframe */
+        from {
+          left: 10000;
+        }
+        /* keyframe */
+        to {
+          left: 1px;
+        }
+      }
+
+
+
+      /* 지도 수원 */
+
+.suwon-earth_map { position:fixed; width:100%; height:100%; top:0px; left:0px;  background:url(../img/suwon.gif) no-repeat center top; background-size:cover;}
+
+.suwon_map
+{
+    position: absolute;
+   
+    padding: 150px;
+    margin: 0;
+
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+
+    }
+
+    @keyframes move {
+        /* keyframe */
+        from {
+          left: 10000;
+        }
+        /* keyframe */
+        to {
+          left: 1px;
+        }
+      }
+
+  /* 소개 글*/
+
+.title{
+    font-family:Orbitron;
+    font-size: 50px;
+    font-weight: bold;
+    width:100%; padding: 25px; z-index:2;
+    text-align: center;
+    color: rgb(187, 184, 33);
+
+}
+
+.title1.splitting .char {
+    top:150px;
+    animation: bounceInDown 1s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title2.splitting .char {
+    top:155px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title3.splitting .char {
+    top:160px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title4.splitting .char {
+    top:165px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+.title5.splitting .char {
+    top:170px;
+    animation: bounceInLeft 10s;
+    animation-delay: calc(60ms * var(--char-index)) !important;            
+}
+
+
+/*로고*/
+h1 { position:fixed; top:40px; left:70px; z-index:2;}
+h1 img { width:130px; }
+
+/*주 메뉴*/
+.gnb { position:fixed; top:50px; right:25px; z-index:2;}
+.gnb li { float:left; margin-left:50px; list-style: none;   line-height: 34px;}
+.gnb li a { font-size:30px; font-weight:bold; color:rgb(255, 255, 255); transform:scale(1); opacity:0.5; transition:all 0.5s;}
+.gnb li a:hover { transform:scale(1.5); opacity:1;}  
+
+.gnb a {
+  display: block; /* 범위 확장 */
+  text-decoration: none;
+  color: #616161;
+  text-align: center;
+  }
+
+  .sub_menu { display: none; } /* 서브메뉴들 숨김 */
+  
+  .selec { background: #c45; color: #efefef; }
+
+
+
+
+/*sns 모음*/
+.sns { position:fixed; top:20px; right:50px; z-index:2; }
+.sns li { float:left; margin-left:30px;}
+.sns li .fa { font-size:18px; color:#fff; transform:scale(1); opacity:0.5; transition:all 0.5s;}
+.sns li .fa:hover { transform:scale(1.5); opacity:1;}
+
+/*스크롤 네비게이션*/
+.scrollNavi { position:fixed; left:100px; top:300px; z-index:2;}
+.scrollNavi li { position:relative; width:150px; height:35px; margin-bottom:20px; font-size:12px; color:#fff; text-align:center; perspective:400px; cursor:pointer;}
+.scrollNavi li em { position:absolute; top:8px; left:20px; font-size:14px; font-weight:bold; color:#fff; text-shadow:1px 1px 1px #000;}
+.scrollNavi li span { display:block; width:3%; height:100%; position:absolute; transform:skewX(-30deg); box-shadow:1px 1px 1px #000;}
+.scrollNavi li.on span { width:100%;}
+.scrollNavi li:nth-child(1) span { background:#ff0f51;}
+.scrollNavi li:nth-child(2) span { background:#fffb02;}
+.scrollNavi li:nth-child(3) span { background:#7d90e4;}
+
+/*박스 그룹 레이아웃*/
+section { width:1200px; height:700px; position:fixed; left:50%; margin-left:-600px; top:50%; margin-top:-350px; perspective:2300px; z-index:1; }
+section>article { width:1200px; height:700px; position:absolute; top:0px; left:0px; opacity:0.5; z-index:8;}
+section>article.on { opacity:1; z-index:9;}
+section>article:nth-child(1) { transform:translateZ(0px);}
+section>article:nth-child(2) { transform:translateZ(-5000px);}
+section>article:nth-child(3) { transform:translateZ(-10000px);}
+section>article:nth-child(4) { transform:translateZ(-15000px);}
+section>article:nth-child(5) { transform:translateZ(-20000px);}
+
+
+/*박스 폰트 및 이미지 공통속성*/
+section>article>p { position:absolute; width:450px; padding:30px 60px; color:#fff; opacity:1;}
+section>article>p>span { font-family:orbitron; font-size:60px; letter-spacing:0px; line-height:1.5; }
+section>article>img { position:absolute;}
+
+
+
+/*첫 번째 박스 콘텐츠*/
+section>article:nth-child(1) p { bottom:100px; right:-100px;}
+section>article:nth-child(1) p span { color:#ff0f51;}
+.obj11 { bottom:-100px; left:-270px;}
+.obj12 { top:-85px; right:-593px;}
+.obj13 { bottom:20px; left:-100px;}
+
+/*두 번째 박스 콘텐츠*/
+section>article:nth-child(2) p { bottom:100px; right:-100px;}
+section>article:nth-child(2) p span { color:#fffb02;}
+.obj21 { bottom:-420px; right:-710px;}
+.obj22 { bottom:-100px; right:-50px;}
+
+/*세 번째 박스 콘텐츠*/
+section>article:nth-child(3) p { bottom:300px; right:-100px;}
+section>article:nth-child(3) p span { color:#b57de4;}
+.obj31 { bottom:70px; right:110px;}
+.obj32 { bottom:-160px; left:100px;}
